@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="playerChoiceScreen"">
+        <h1> Tic Tac Toe</h1>
+        <img id="logo" src="tttlogo.webp" alt="logo">
+
+        <h2>Choose a game play mode</h2>
+        <div class="choice">
+            <button class="btn" onclick="playWithComputer()">Play With Computer</button>
+            <button class="btn" onclick="playWithFriend()">Play With Friend</button>
+        </div>
+
+    </div>
+    <!-- Modal for X or O selection -->
+    <div id="choiceModal" class="modal">
+        <div class="modal-content">
+            <h2>Choose Your Symbol</h2>
+            <div class="symbol-choice">
+                <button class="symbol-btn" onclick="selectSymbol('X')">X</button>
+                <button class="symbol-btn" onclick="selectSymbol('O')">O</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="container" >
+        <h1>Tic-Tac-Toe</h1>
+        <p id="status"></p>
+        <div id="gameBoard">
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+          </div>
+          <button id="resetButton" class="btn" onclick="restartGame()">Reset Game</button>
+          
+    </div>
+    <div id="congratulationsScreen" style="display:none">
+        <h2>Congratulations 🎉 You Win 👑 </h2>
+        <img src="trophy.png" id="trophy">
+        <button class="symbol-btn" onclick="play_again()">Play Again</button>
+    </div>
+    <div class="comwin">
+        <div class="modal-content">
+        <h2 id="status2"></h2>
+        <button class="symbol-btn" onclick = "play_again()">Play Again</button>
+    </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
